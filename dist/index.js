@@ -11,9 +11,6 @@ function wechsel_zu_impressum(){
     window.location.href="impressum.html";
 }
 
-
-
-
 document.addEventListener('DOMContentLoaded', () => {
     const menu = document.getElementById('menu');
     const datenschutzButton = document.getElementById("datenschutzButton");
