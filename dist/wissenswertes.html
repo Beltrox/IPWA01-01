@@ -1,0 +1,65 @@
+<script type="module" src="index.js"></script>
+<!DOCTYPE html>
+<html lang="de">
+    <head>
+        <link href="../dist/styles.css" rel="stylesheet">
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>CO2 Statistik</title>
+        <link rel="icon" href="../resources/favicon.ico">
+    </head>
+    <body>
+        <header class="w-full">
+            <div class="bg-green-700 w-full flex flex-col p-3 items-center space-y-3">
+                <img src="../resources/logo.png" id="logo" class="w-1/12 h-auto">
+                <h1 class="text-2xl font-semibold text-white">CO2 Statistik</h1>
+            </div>
+            <div id="menu" class="bg-green-700 w-full flex flex-row space-x-1 p-2 border border-black">
+                <a href="index.html" class="bg-green-800 rounded-2xl w-auto p-3 border border-black text-white">Home</a>
+                <a href="co2Tabellen.html" class="bg-green-800 rounded-2xl w-auto p-3 border border-black text-white">CO2 Tabellen</a>
+                <a href="wissenswertes.html" class="bg-green-800 rounded-2xl w-auto p-3 border border-black text-white">Wissenswertes</a>
+            </div>
+        </header>
+        <div class="flex flex-row min-h-full w-full">
+            <div class="bg-gray-200 md:w-1/5"></div>
+            <div class="bg-white shadow-lg md:w-3/5 w-full flex flex-col items-center flex-grow">
+                <h1 class="font-bold text-3xl w-full pt-10 pb-16 text-center">Wissenswertes</h1>
+                <div class="space-y-3 pl-8 pr-8 pb-16">
+                    <section>
+                        <h1 class="font-bold pt-5 pb-3">CO2-Emissionen von Unternehmen: Ursachen und Bedeutung</h1>
+                        <p>
+                            Unternehmen tragen einen erheblichen Teil der globalen CO2-Emissionen bei, die einen wesentlichen Einfluss auf den Klimawandel haben. Diese Emissionen entstehen durch verschiedene Prozesse, darunter die Energieerzeugung, Produktion, Logistik und sogar die Nutzung von Produkten durch Endverbraucher. Besonders energieintensive Branchen wie die Schwerindustrie, die Öl- und Gasindustrie sowie der Transportsektor sind maßgeblich für hohe CO2-Werte verantwortlich.
+                        </p>
+                        <p>
+                            Der Ausstoß von Kohlendioxid (CO2) durch Unternehmen ist eng mit der Verbrennung fossiler Brennstoffe wie Kohle, Erdöl und Erdgas verbunden. Diese Brennstoffe sind nach wie vor die Hauptquelle für die Energieversorgung vieler Unternehmen weltweit. Darüber hinaus können auch Prozesse wie die Zementherstellung, die Stahlproduktion und die Chemieindustrie erhebliche Mengen an CO2 freisetzen.
+                        </p>
+                    </section>
+                    <section>
+                        <h1 class="font-bold pt-5 pb-3">Warum die Verringerung der CO2-Emissionen so wichtig ist</h1>
+                        <p>
+                            Die Verringerung der CO2-Emissionen ist entscheidend für den Schutz unserer Umwelt und die Zukunft unseres Planeten. Hohe CO2-Werte in der Atmosphäre tragen zur globalen Erwärmung bei, die wiederum extreme Wetterereignisse, das Schmelzen der Eiskappen und den Anstieg des Meeresspiegels verursacht. Diese Auswirkungen gefährden nicht nur natürliche Ökosysteme, sondern auch das Leben und die Existenzgrundlagen von Millionen von Menschen weltweit.
+                        </p>
+                        <p>
+                            Unternehmen spielen eine zentrale Rolle in den globalen Bemühungen zur Bekämpfung des Klimawandels. Durch die Reduzierung ihrer CO2-Emissionen können sie einen erheblichen Beitrag zur Eindämmung der Erderwärmung leisten. Dies erfordert den Übergang zu erneuerbaren Energien, die Verbesserung der Energieeffizienz und die Einführung innovativer Technologien, die den CO2-Ausstoß minimieren.
+                        </p>
+                        <p>
+                            Es liegt in der Verantwortung jedes Unternehmens, Maßnahmen zur Reduzierung von CO2 zu ergreifen. Doch auch jeder Einzelne kann durch bewusste Konsumentscheidungen und die Unterstützung nachhaltiger Unternehmen einen Beitrag leisten. Nur gemeinsam können wir den CO2-Ausstoß verringern und die negativen Auswirkungen auf unser Klima begrenzen.
+                        </p>
+                        <p>
+                            Die Zeit zu handeln ist jetzt – für eine nachhaltigere und lebenswertere Zukunft!
+                        </p>
+                    </section>
+                </div>
+            </div>
+            <div class="bg-gray-200 md:w-1/5"></div>
+        </div>
+        <footer class="bg-green-700 w-full h-auto flex flex-row space-x-1 justify-end p-3">
+            <button id="datenschutzButton" class="bg-green-800 rounded w-auto p-0.5 border border-black text-white">
+                Datenschutz
+            </button>
+            <button id="impressumButton" class="bg-green-800 rounded w-auto p-0.5 border border-black text-white">
+                Impressum
+            </button>
+        </footer>
+    </body>
+</html>

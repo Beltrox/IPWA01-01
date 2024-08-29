@@ -1,47 +1,56 @@
+<script type="module" src="index.js"></script>
 <!DOCTYPE html>
 <html lang="de">
-<head>
-    <link href="../dist/styles.css" rel="stylesheet">
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CO2 Statistik</title>
-</head>
-<body>
-<script type="module" src="index.js"></script>
-<header class="w-full">
-    <div class="bg-green-700 w-full flex flex-col p-3 items-center space-y-3">
-        <img src="../resources/logo.png" class="w-1/12 h-auto">
-        <h1 class="text-2xl font-semibold text-white">CO2 Statistik</h1>
-    </div>
-    <nav id="menu" class="bg-green-700 w-full flex flex-row space-x-1 p-2 border border-black">
-        <a href="#statistik1" class="bg-green-800 rounded-2xl w-auto p-3 border border-black text-white">Textteil 1</a>
-        <a href="#statistik2" class="bg-green-800 rounded-2xl w-auto p-3 border border-black text-white">Textteil 2</a>
-        <a href="#statistik3" class="bg-green-800 rounded-2xl w-auto p-3 border border-black text-white">Textteil 3</a>
-    </nav>
-</header>
-<div class="bg-green-400 flex flex-col justify-center">
-    <div class="bg-green-500 md:w-1/2 w-4/5 flex flex-col self-center space-y-36">
-        <div id="statistik1" class="w-full p-4 text-center">
-            <h1 class="font-bold text-5xl">Willkommen!</h1>
+    <head>
+        <link href="../dist/styles.css" rel="stylesheet">
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>CO2 Statistik</title>
+        <link rel="icon" href="../resources/favicon.ico">
+    </head>
+    <body>
+        <header class="w-full">
+            <div class="bg-green-700 w-full flex flex-col p-3 items-center space-y-3">
+                <img src="../resources/logo.png" class="w-1/12 h-auto">
+                <h1 class="text-2xl font-semibold text-white">CO2 Statistik</h1>
+            </div>
+            <div id="menu" class="bg-green-700 w-full flex flex-row space-x-1 p-2 border border-black">
+                <a href="index.html" class="bg-green-800 rounded-2xl w-auto p-3 border border-black text-white">Home</a>
+                <a href="co2Tabellen.html" class="bg-green-800 rounded-2xl w-auto p-3 border border-black text-white">CO2 Tabellen</a>
+                <a href="wissenswertes.html" class="bg-green-800 rounded-2xl w-auto p-3 border border-black text-white">Wissenswertes</a>
+            </div>
+        </header>
+        <div class="flex flex-row min-h-full w-full">
+            <div class="bg-gray-200 md:w-1/5"></div>
+            <div class="bg-white shadow-lg md:w-3/5 w-full flex flex-col items-center flex-grow">
+                <h1 class="font-bold text-3xl w-full pt-10 pb-16 text-center">Willkommen!</h1>
+                <img src="../resources/homePic.png" class="md:w-1/2 w-3/5">
+                <div class="space-y-3 pl-8 pr-8 pt-16 pb-16">
+                    <section>
+                        <p>
+                            Unsere Welt steht vor einer großen Herausforderung: dem Klimawandel. Einer der Hauptfaktoren, der zur globalen Erwärmung beiträgt, ist der CO2-Ausstoß. Auf dieser Website bieten wir Ihnen umfassende Informationen über die CO2-Emissionen von Ländern und Unternehmen weltweit.
+                        </p>
+                        <p>
+                            Unsere Plattform stellt Tabellen zur Verfügung, die die CO2-Emissionen verschiedener Länder und Unternehmen aufzeigen. Diese Daten ermöglichen es Ihnen, die globalen und regionalen Trends besser zu verstehen und die Fortschritte bei der Reduzierung von Treibhausgasen zu verfolgen.
+                        </p>
+                        <p>
+                            Unser Ziel ist es, Transparenz zu schaffen und die Bedeutung der Reduzierung von CO2-Emissionen hervorzuheben. Informieren Sie sich, vergleichen Sie und gewinnen Sie ein tieferes Verständnis für die Dringlichkeit, unseren Planeten zu schützen.
+                        </p>
+                        <p>
+                            Gemeinsam können wir einen Beitrag zur Bekämpfung des Klimawandels leisten. Starten Sie jetzt und erkunden Sie die aktuellen CO2-Daten!
+                        </p>
+                    </section>
+                </div>
+            </div>
+            <div class="bg-gray-200 md:w-1/5"></div>
         </div>
-        <hr class="bg-black w-full">
-        <div id="statistik2" class="w-full p-4">
-            <div id="table-container1" class="flex flex-col justify-center items-center space-y-2"></div>
-        </div>
-        <hr class="bg-black w-full">
-        <div id="statistik3" class="w-full md:p-10 p-4">
-            <div id="table-container2" class="flex flex-col justify-center items-center space-y-2"></div>
-        </div>
-
-    </div>
-</div>
-<footer class="bg-green-700 w-full h-auto flex flex-row space-x-1 justify-end p-3">
-    <button id="datenschutzButton" class="bg-green-800 rounded w-auto p-0.5 border border-black text-white">
-        Datenschutz
-    </button>
-    <button id="impressumButton" class="bg-green-800 rounded w-auto p-0.5 border border-black text-white">
-        Impressum
-    </button>
-</footer>
-</body>
+        <footer class="bg-green-700 w-full h-auto flex flex-row space-x-1 justify-end p-3">
+            <button id="datenschutzButton" class="bg-green-800 rounded w-auto p-0.5 border border-black text-white">
+                Datenschutz
+            </button>
+            <button id="impressumButton" class="bg-green-800 rounded w-auto p-0.5 border border-black text-white">
+                Impressum
+            </button>
+        </footer>
+    </body>
 </html>
