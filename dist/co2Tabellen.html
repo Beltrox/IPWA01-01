@@ -1,0 +1,80 @@
+<script type="module" src="index.js"></script>
+<!DOCTYPE html>
+<html lang="de">
+    <head>
+        <link href="../dist/styles.css" rel="stylesheet">
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>CO2 Statistik</title>
+        <link rel="icon" href="../resources/favicon.ico">
+    </head>
+    <body>
+        <header class="w-full">
+            <div class="bg-green-700 w-full flex flex-col p-3 items-center space-y-3">
+                <img src="../resources/logo.png" id="logo" class="w-1/12 h-auto">
+                <h1 class="text-2xl font-semibold text-white">CO2 Statistik</h1>
+            </div>
+            <div id="menu" class="bg-green-700 w-full flex flex-row space-x-1 p-2 border border-black">
+                <a href="index.html" class="bg-green-800 rounded-2xl w-auto p-3 border border-black text-white">Home</a>
+                <a href="co2Tabellen.html" class="bg-green-800 rounded-2xl w-auto p-3 border border-black text-white">CO2 Tabellen</a>
+                <a href="wissenswertes.html" class="bg-green-800 rounded-2xl w-auto p-3 border border-black text-white">Wissenswertes</a>
+            </div>
+            <div id="localLinks" class="bg-green-700 w-full flex flex-row space-x-1 p-2 border border-black justify-center">
+                <a href="#statistik1" class="bg-green-800 rounded-2xl w-auto p-3 border border-black text-white">Länderübersicht</a>
+                <a href="#statistik2" class="bg-green-800 rounded-2xl w-auto p-3 border border-black text-white">Unternehmensübersicht</a>
+            </div>
+        </header>
+        <div class="flex flex-row">
+            <div class="bg-gray-200 md:w-1/5 "></div>
+            <div class="bg-white shadow-lg md:w-3/5 w-full flex flex-col self-center space-y-8">
+                <h1 class="font-bold text-3xl w-full pt-10 pb-16 text-center">CO2-Emissionen: Länder und Unternehmen im Vergleich</h1>
+                <div id="obereText" class="w-full pl-8 pr-8">
+                    <section>
+                        <p>
+                            Auf dieser Seite bieten wir Ihnen einen tieferen Einblick in die CO2-Emissionen weltweit. Unsere Tabellen präsentieren die Emissionsdaten sowohl auf Länderebene als auch für einzelne Unternehmen.
+                        </p>
+                        <p>
+                            Diese Informationen sind entscheidend, um die globalen Bemühungen zur Reduzierung von Treibhausgasen zu verstehen und zu bewerten.
+                        </p>
+                    </section>
+                    <section>
+                        <h1 class="font-bold pt-5 pb-3">Länderübersicht</h1>
+                        <p>
+                            Unsere Tabelle zeigt die CO2-Emissionen der Länder, sodass Sie nachvollziehen können, welche Nationen die größten Beiträger zur globalen Erwärmung sind.
+                        </p>
+                    </section>
+                    <section>
+                        <h1 class="font-bold pt-5 pb-3">Unternehmensübersicht</h1>
+                        <p>
+                            Neben den Ländern haben wir auch die CO2-Emissionen der größten Unternehmen weltweit erfasst.
+                        </p>
+                        <p>
+                            Unternehmen spielen eine wesentliche Rolle im Kampf gegen den Klimawandel, und unsere Tabelle gibt Ihnen einen klaren Überblick darüber, welche Konzerne bereits Maßnahmen ergriffen haben und welche noch Nachholbedarf haben.
+                        </p>
+                    </section>
+                </div>
+                <hr class="bg-black w-full">
+                <div id="statistik1" class="w-full p-4 space-y-4">
+                    <h1 class="font-bold text-xl pb-3 text-center">Länderübersicht</h1>
+                    <div id="table-container1" class="flex flex-col justify-center items-center space-y-2"></div>
+                    <a href="#menu" class="w-auto p-1 border border-black float-right">↑ zum Seitenanfang</a>
+                </div>
+                <hr class="bg-black w-full">
+                <div id="statistik2" class="w-full md:p-10 p-4 space-y-4">
+                    <h1 class="font-bold text-xl pb-3 text-center">Unternehmensübersicht</h1>
+                    <div id="table-container2" class="flex flex-col justify-center items-center space-y-2"></div>
+                    <a href="#menu" class="w-auto p-1 border border-black float-right">↑ zum Seitenanfang</a>
+                </div>
+            </div>
+            <div class="bg-gray-200 md:w-1/5"></div>
+        </div>
+        <footer class="bg-green-700 w-full h-auto flex flex-row space-x-1 justify-end p-3">
+            <button id="datenschutzButton" class="bg-green-800 rounded w-auto p-0.5 border border-black text-white">
+                Datenschutz
+            </button>
+            <button id="impressumButton" class="bg-green-800 rounded w-auto p-0.5 border border-black text-white">
+                Impressum
+            </button>
+        </footer>
+    </body>
+</html>

@@ -31,16 +31,25 @@ function wechsel_zu_impressum(){
 }
 
 /**
+ * Navigiert zur index.html Seite
+ */
+function wechsel_zu_homepage(){
+    window.location.href="index.html";
+}
+
+/**
  * Verarbeitet die Seitenausrichtung basierend auf der Browsersprache des Benutzers
- * Fügt Event-Listener für die Datenschutz- und Impressum-Buttons hinzu
+ * Fügt Event-Listener für die Datenschutz-, Impressum- und Logo-Buttons hinzu
  */
 document.addEventListener('DOMContentLoaded', () => {
     const menu = document.getElementById('menu');
     const datenschutzButton = document.getElementById("datenschutzButton");
     const impressumButton = document.getElementById("impressumButton");
+    const logoButton = document.getElementById("logo");
 
     datenschutzButton.addEventListener("click", () => wechsel_zu_datenschutz());
     impressumButton.addEventListener("click", () => wechsel_zu_impressum());
+    logoButton.addEventListener("click", () => wechsel_zu_homepage());
 
     if (isRTL) {
         menu.classList.add('justify-end');
@@ -89,6 +98,15 @@ async function loadJson(dataPath) {
 }
 
 /**
+ * Bereinigt die Eingabe, sodass nur Buchstaben erlaubt sind
+ * @param {string} input - Die Eingabe des Benutzers
+ * @returns {string} - Die bereinigte Eingabe
+ */
+function sanitizeInput(filterInput) {
+    return filterInput.value.replace(/[^a-zA-Z\s]/g, ''); // Nur Buchstaben werden beibehalten
+}
+
+/**
  * Fügt ein Eingabefeld zur Filterung der Tabellendaten hinzu
  * @param {Object[]} jsonData - JSON-Daten, aus denen die Tabelle erstellt wird
  * @param {string} elementId - ID des HTML-Elements, in das die Tabelle eingefügt wird
@@ -97,9 +115,12 @@ function appendTableWithFilter(jsonData, elementId) {
     const container = document.getElementById(elementId);
     const filterInput = document.createElement('input');
 
-    filterInput.classList.add('w-auto', 'mt-4', 'placeholder-gray-500', 'p-2');
+    filterInput.classList.add('w-auto', 'mt-4', 'placeholder-gray-500', 'border', 'border-black', 'p-2');
     filterInput.setAttribute('placeholder', 'Filter nach ' + jsonData[0][0]);
-    filterInput.addEventListener("input", (event) => {regenerateTable(jsonData, elementId, filterInput.value)});
+    filterInput.addEventListener("input", (event) => {
+        const sanitizedValue = sanitizeInput(filterInput);
+        filterInput.value = sanitizedValue;
+        regenerateTable(jsonData, elementId, sanitizedValue)});
     container.appendChild(filterInput);
 }
 
@@ -226,7 +247,7 @@ function generateTable(jsonData, elementId, sorted = undefined, filteredData = '
                 row.appendChild(cell);
             });
             tbody.appendChild(row);
-        } else if (typeof item[columnIndex] === 'number' && item[columnIndex].toString().includes(filteredData)) {
+        } else if (item[0].toLowerCase().includes(filteredData.toLowerCase())) {
             const row = document.createElement('tr');
             Object.values(item).forEach(value => {
                 const cell = document.createElement('td');
